@@ -12,6 +12,9 @@ tools/sitecheck/target/
 # API runtime data (inquiries are private)
 api/data/
 
+# Generated screenshot previews (render artifacts, not source)
+preview/
+
 # OS / editor noise
 .DS_Store
 Thumbs.db

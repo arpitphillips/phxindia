@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact – PHX India</title>
+  <meta name="description" content="Contact PHX India (Photographix) — book a photography, videography or styling shoot. Mumbai · Ahmedabad · South India.">
+  <link rel="canonical" href="https://phxindia.com/contact/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact – PHX India">
+  <meta property="og:description" content="Contact PHX India (Photographix) — book a photography, videography or styling shoot. Mumbai · Ahmedabad · South India.">
+  <meta property="og:url" content="https://phxindia.com/contact/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@Phxindia">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script type="module" src="/assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="/" aria-label="PHX India — home">
+          <span class="brand-name">Photographix</span>
+          <span class="brand-sub">PHX India · Imaging Services</span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li><a href="/photography/">Photography</a></li>
+            <li><a href="/videography/">Videography</a></li>
+            <li><a href="/styling/">Styling</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/team/">Team</a></li>
+            <li><a class="nav-cta" href="/contact/" aria-current="page">Book a Shoot</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero hero-minor">
+      <div class="container">
+        <span class="label">Contact</span>
+        <h1>Book a shoot</h1>
+        <p class="lede">Tell us about the space, the timeline and the story you want told — we will take it from there.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="reveal">
+            <div class="info-list">
+              <div class="info-row">
+                <span class="label">Email</span>
+                <span class="info-value"><a href="mailto:mailbox@phxindia.in">mailbox@phxindia.in</a></span>
+              </div>
+              <div class="info-row">
+                <span class="label">Phone</span>
+                <span class="info-value"><a href="tel:+919833117339">+91 98331 17339</a></span>
+              </div>
+              <div class="info-row">
+                <span class="label">Studio</span>
+                <span class="info-value">1st Floor, 120 Creative Industries Premises CSL,<br>Sundar Nagar Road No. 2, Kalina,<br>Santacruz (E), Mumbai 400098</span>
+              </div>
+              <div class="info-row">
+                <span class="label">Elsewhere</span>
+                <span class="info-value">
+                  <a href="https://www.instagram.com/phxindia/" rel="noopener">Instagram</a> ·
+                  <a href="https://www.facebook.com/phxindia/" rel="noopener">Facebook</a> ·
+                  <a href="https://x.com/phxindia" rel="noopener">X</a> ·
+                  <a href="https://in.linkedin.com/company/phx-india-imging-services-llp" rel="noopener">LinkedIn</a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="reveal">
+            <form id="booking-form" action="mailto:mailbox@phxindia.in" method="post" enctype="text/plain"
+                  data-endpoint="/api/booking" data-recipient="mailbox@phxindia.in" novalidate>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="bf-name">Name <span class="req">*</span></label>
+                  <input id="bf-name" name="name" type="text" autocomplete="name" required>
+                  <span class="field-error" data-error-for="name" aria-live="polite"></span>
+                </div>
+                <div class="field">
+                  <label for="bf-email">Email <span class="req">*</span></label>
+                  <input id="bf-email" name="email" type="email" autocomplete="email" required>
+                  <span class="field-error" data-error-for="email" aria-live="polite"></span>
+                </div>
+                <div class="field">
+                  <label for="bf-phone">Phone</label>
+                  <input id="bf-phone" name="phone" type="tel" autocomplete="tel">
+                </div>
+                <div class="field">
+                  <label for="bf-service">Service</label>
+                  <select id="bf-service" name="service">
+                    <option value="">Select…</option>
+                    <option>Photography</option>
+                    <option>Videography</option>
+                    <option>Styling</option>
+                    <option>Photography + Videography</option>
+                  </select>
+                </div>
+                <div class="field field-full">
+                  <label for="bf-location">Project location</label>
+                  <input id="bf-location" name="location" type="text" placeholder="City / site">
+                </div>
+                <div class="field field-full">
+                  <label for="bf-message">About the project <span class="req">*</span></label>
+                  <textarea id="bf-message" name="message" required></textarea>
+                  <span class="field-error" data-error-for="message" aria-live="polite"></span>
+                </div>
+              </div>
+              <p style="margin-top: 24px;"><button class="btn btn-solid" type="submit">Send Inquiry</button></p>
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand-name">Photographix</span>
+          <p>PHX India Imaging Services LLP — photography, videography and styling for the architecture and design community.</p>
+        </div>
+        <div class="footer-col">
+          <span class="label">Studio</span>
+          <ul>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/team/">Team</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <span class="label">Work</span>
+          <ul>
+            <li><a href="/photography/">Photography</a></li>
+            <li><a href="/videography/">Videography</a></li>
+            <li><a href="/styling/">Styling</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <span class="label">Elsewhere</span>
+          <ul>
+            <li><a href="https://www.instagram.com/phxindia/" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.facebook.com/phxindia/" rel="noopener">Facebook</a></li>
+            <li><a href="https://x.com/phxindia" rel="noopener">X (Twitter)</a></li>
+            <li><a href="https://in.linkedin.com/company/phx-india-imging-services-llp" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <span>© <span id="year">2026</span> PHX India Imaging Services LLP. All rights reserved.</span>
+        <span>Mumbai · Ahmedabad · South India</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

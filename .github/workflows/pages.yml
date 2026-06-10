@@ -1,0 +1,48 @@
+name: Deploy preview to GitHub Pages
+
+on:
+  push:
+    branches: [claude/beautiful-brahmagupta-i49ewa]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # The repo's canonical form uses root-relative URLs (correct for the
+      # real phxindia.com). Project Pages serve under /phxindia/, so rewrite
+      # the deployed copy only, and mark the preview noindex.
+      - name: Rebase site for project-pages subpath
+        run: |
+          mkdir -p _pages
+          cp -r site/* _pages/
+          find _pages -name '*.html' -exec sed -i \
+            -e 's|href="/|href="/phxindia/|g' \
+            -e 's|src="/|src="/phxindia/|g' \
+            -e 's|</title>|</title>\n  <meta name="robots" content="noindex">|' \
+            {} +
+
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _pages
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

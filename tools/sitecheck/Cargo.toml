@@ -1,0 +1,9 @@
+[package]
+name = "sitecheck"
+version = "1.0.0"
+edition = "2021"
+description = "Build-time QA for the PHX static site: internal link/asset checking, required-tag checks, sitemap generation. Std-only by design."
+
+[[bin]]
+name = "sitecheck"
+path = "src/main.rs"
